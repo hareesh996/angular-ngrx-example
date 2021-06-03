@@ -22,7 +22,7 @@ interface BookResponse{
 export class BooksService{
   constructor(private httpClient: HttpClient){}
 
-  getBookgs(): Observable<Array<Book>>{
+  getBooks(): Observable<Array<Book>>{
     return this.httpClient.get<BookResponse>('https://www.googleapis.com/books/v1/volumes?maxResults=5&orderBy=relevance&q=oliver%20sacks')
     .pipe(
       map( (bookResponse) => {

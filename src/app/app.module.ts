@@ -6,6 +6,9 @@ import { bookReducer } from './books/books.reducers';
 import { collectionReducer } from './books/collections.reducers';
 import { CounterComponent } from './counter/counter.component';
 import { CounterReducer } from './counter/counter.reducers';
+import { BooklistComponent } from './books/booklist/booklist.component';
+import { BookcollectionComponent } from './books/bookcollection/bookcollection.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   imports: [
@@ -14,9 +17,15 @@ import { CounterReducer } from './counter/counter.reducers';
       count: CounterReducer,
       books: bookReducer,
       collection: collectionReducer
-    })
+    }),
+    HttpClientModule
   ],
-  declarations: [AppComponent, CounterComponent],
+  declarations: [
+    AppComponent,
+    CounterComponent,
+    BooklistComponent,
+    BookcollectionComponent
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule {}
