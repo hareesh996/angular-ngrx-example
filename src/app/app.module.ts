@@ -1,9 +1,9 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { StoreModule } from '@ngrx/store';
-import { CounterReducer } from './counter/counter.reducers';
 import { AppComponent } from './app.component';
 import { CounterComponent } from './counter/counter.component';
+import { CounterReducer } from './counter/counter.reducers';
 
 @NgModule({
   imports: [
